@@ -9,14 +9,15 @@
 	<p class=title align=center>
 		廊坊市干部考核社会评价调查系统
 	</p>
-	<div>
+	<div class=main>
 		<br><br>
 		<table align=center>
 			<tr><td><p>手机号码：</p></td><td><input id="phonenum" /></td><td><input id="second" type="button"  value="获取验证码" /></td></tr>
 			<tr><td><p>验证码：</p></td><td><input id="code" /></td></tr>
 		</table>
 		<br><br>
-		<input class=btn id="checkcode" type="button" value="进入问卷" />
+		<!-- <input class=btn id="checkcode" type="button" value="进入问卷" /> -->
+		<input class=btn type="button" value="进入问卷" onClick='location.href = "baseinfo.html";'/>
 		<em id="errormsg"></em>
 	</div>
 </body>

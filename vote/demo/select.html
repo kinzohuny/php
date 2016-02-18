@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>廊坊市干部考核社会评价调查系统</title>
+	<link href="./css/main.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class=title align=center>
+		选择评价对象。请选择市直单位或县（市、区）进行评价。
+	</p>
+
+	<div class=main>
+		<form id="user_login" action="submit.php" method="post">
+		
+			<p class="sub_title em2">
+				<label><input type=radio name=select value=1 onClick='$("#result").val("questionx.html");' />市直单位</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=select value=2 onClick='$("#result").val("selectcounty.html");' />县（市、区）</label>
+			</p>
+			<p class=red>*注：每个手机号只限评价一个选项。</p>
+			<br>
+			<input class=hidden id=result value="questionz.html" />
+			<!-- <input class=btn type="submit" value="进入问卷" /> -->
+			<input class=btn type="button" value="进入问卷" onClick='location.href = $("#result").val();' />
+		</form>
+	</div>
+</body>
+</html>
