@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>廊坊市干部考核社会评价调查系统</title>
+	<link href="./css/main.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class=title align=center>
+		廊坊市干部考核社会评价调查系统
+	</p>
+
+	<div>
+		<form id="user_login" action="submit.php" method="post">
+		
+			<p class=sub_title>一、参评人基本信息。请实事求是、完整地填写个人信息。</p>
+			<p class=txt><b class=blue>1、性别：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=sex value=1/>男</label>&nbsp;<label><input type=radio name=sex value=2/>女</label></p>
+			<p class=txt><b class=blue>2、年龄：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=age value=1/>25岁以下</label>&nbsp;<label><input type=radio name=age value=2/>26到60岁</label>&nbsp;<label><input type=radio name=age value=3/>61岁以上</label></p>
+			<p class=txt><b class=blue>3、职业：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=profession value=1/>行政机关</label>&nbsp;<label><input type=radio name=profession value=2/>事业单位</label>&nbsp;<label><input type=radio name=profession value=3/>企业</label>&nbsp;<label><input type=radio name=profession value=4/>自由职业者</label>&nbsp;<label><input type=radio name=profession value=5/>学生</label>&nbsp;<label><input type=radio name=profession value=6/>其他</label></p>
+
+			<p class=sub_title>二、总体评价。请对所列单位进行评价，如不评价默认为不了解。</p>
+			<table>
+			<tr><td><p class=sub_sub_title>（一）县（市、区）</p></td></tr>
+				<tr><td><p class=txt><b>1、三河市</b></p></td><td><p class=select><label><input type=radio name="x01" value=4/>优秀</label>&nbsp;<label><input type=radio name="x01" value=3/>良好</label>&nbsp;<label><input type=radio name="x01" value=2/>一般</label>&nbsp;<label><input type=radio name="x01" value=1/>较差</label>&nbsp;<label><input type=radio name="x01" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>2、大厂县</b></p></td><td><p class=select><label><input type=radio name="x02" value=4/>优秀</label>&nbsp;<label><input type=radio name="x02" value=3/>良好</label>&nbsp;<label><input type=radio name="x02" value=2/>一般</label>&nbsp;<label><input type=radio name="x02" value=1/>较差</label>&nbsp;<label><input type=radio name="x02" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>3、香河县</b></p></td><td><p class=select><label><input type=radio name="x03" value=4/>优秀</label>&nbsp;<label><input type=radio name="x03" value=3/>良好</label>&nbsp;<label><input type=radio name="x03" value=2/>一般</label>&nbsp;<label><input type=radio name="x03" value=1/>较差</label>&nbsp;<label><input type=radio name="x03" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>4、广阳区</b></p></td><td><p class=select><label><input type=radio name="x04" value=4/>优秀</label>&nbsp;<label><input type=radio name="x04" value=3/>良好</label>&nbsp;<label><input type=radio name="x04" value=2/>一般</label>&nbsp;<label><input type=radio name="x04" value=1/>较差</label>&nbsp;<label><input type=radio name="x04" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>5、安次区</b></p></td><td><p class=select><label><input type=radio name="x05" value=4/>优秀</label>&nbsp;<label><input type=radio name="x05" value=3/>良好</label>&nbsp;<label><input type=radio name="x05" value=2/>一般</label>&nbsp;<label><input type=radio name="x05" value=1/>较差</label>&nbsp;<label><input type=radio name="x05" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>6、永清县</b></p></td><td><p class=select><label><input type=radio name="x06" value=4/>优秀</label>&nbsp;<label><input type=radio name="x06" value=3/>良好</label>&nbsp;<label><input type=radio name="x06" value=2/>一般</label>&nbsp;<label><input type=radio name="x06" value=1/>较差</label>&nbsp;<label><input type=radio name="x06" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>7、固安县</b></p></td><td><p class=select><label><input type=radio name="x07" value=4/>优秀</label>&nbsp;<label><input type=radio name="x07" value=3/>良好</label>&nbsp;<label><input type=radio name="x07" value=2/>一般</label>&nbsp;<label><input type=radio name="x07" value=1/>较差</label>&nbsp;<label><input type=radio name="x07" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>8、霸州市</b></p></td><td><p class=select><label><input type=radio name="x08" value=4/>优秀</label>&nbsp;<label><input type=radio name="x08" value=3/>良好</label>&nbsp;<label><input type=radio name="x08" value=2/>一般</label>&nbsp;<label><input type=radio name="x08" value=1/>较差</label>&nbsp;<label><input type=radio name="x08" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>9、文安县</b></p></td><td><p class=select><label><input type=radio name="x09" value=4/>优秀</label>&nbsp;<label><input type=radio name="x09" value=3/>良好</label>&nbsp;<label><input type=radio name="x09" value=2/>一般</label>&nbsp;<label><input type=radio name="x09" value=1/>较差</label>&nbsp;<label><input type=radio name="x09" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+				<tr><td><p class=txt><b>10、大城县</b></p></td><td><p class=select><label><input type=radio name="x10" value=4/>优秀</label>&nbsp;<label><input type=radio name="x10" value=3/>良好</label>&nbsp;<label><input type=radio name="x10" value=2/>一般</label>&nbsp;<label><input type=radio name="x10" value=1/>较差</label>&nbsp;<label><input type=radio name="x10" value=0 checked />不了解</label>&nbsp;</p></td></tr>
+			
+			</table>
+
+			<br>
+			<input class=btn type="submit" value="进入问卷" />
+		</form>
+	</div>
+</body>
+</html>

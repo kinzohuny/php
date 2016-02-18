@@ -1,51 +1,21 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta charset="UTF-8">
 	<title>廊坊市干部考核社会评价调查系统</title>
-	<style>
-		body {font-size:14.0pt;font-family:宋体}
-		div {width:800px;margin: 0 auto;}
-		p.title {text-align:center;line-height:28.0pt;font-size:22.0pt;font-family:方正小标宋简体;font-weight:bold;}
-		p.sub_title {line-height:22.0pt;font-size:16.0pt;font-family:宋体;font-weight:bold;margin-top: 18px; margin-bottom: 8px;}
-		p.sub_sub_title {line-height:22.0pt;font-size:16.0pt;font-family:宋体;text-indent: 2em;font-weight:bold;margin-top: 18px; margin-bottom: 8px;}
-		p.txt {font-size:14.0pt;font-family:宋体;text-indent: 4em;margin-top: 4px; margin-bottom: 4px;}
-		p.select {margin-top: 4px; margin-bottom: 4px;}
-		textarea {width:600px;height:80px;resize:none;}
-		
-		.btn {background:url(./button.png) no-repeat; border:none; color:#141;font-size:22.0pt;font-weight: 600;width: 180px;height: 60px;margin-left: 300px;padding-bottom: 2px;opacity: 0.8;}
-		.blue {color:#0000FF}
-		.red {color:#FF0000}
-	</style>
+	<link href="./css/main.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body bgcolor=white lang=ZH-CN>
 	<p class=title align=center>
-		廊坊市干部考核社会评价调查系统
+		市直单位领导班子评价系统
 	</p>
 
 	<div>
 		<form id="user_login" action="submit.php" method="post">
-		
-			<p class=sub_title>一、参评人基本信息。请实事求是、完整地填写个人信息。</p>
-			<p class=txt><b class=blue>1、性别：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=sex value=1/>男</label>&nbsp;<label><input type=radio name=sex value=2/>女</label></p>
-			<p class=txt><b class=blue>2、年龄：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=age value=1/>25岁以下</label>&nbsp;<label><input type=radio name=age value=2/>26到60岁</label>&nbsp;<label><input type=radio name=age value=3/>61岁以上</label></p>
-			<p class=txt><b class=blue>3、职业：</b><em class=red>*必填</em>&nbsp;<label><input type=radio name=profession value=1/>行政机关</label>&nbsp;<label><input type=radio name=profession value=2/>事业单位</label>&nbsp;<label><input type=radio name=profession value=3/>企业</label>&nbsp;<label><input type=radio name=profession value=4/>自由职业者</label>&nbsp;<label><input type=radio name=profession value=5/>学生</label>&nbsp;<label><input type=radio name=profession value=6/>其他</label></p>
 
-			<p class=sub_title>二、总体评价。请对所列单位进行评价，如不评价默认为不了解。</p>
+			<p class=sub_title>一、总体评价。请对所列单位领导班子进行评价，如不选项默认为不了解。</p>
 			<table>
-			<tr><td><p class=sub_sub_title>（一）县（市、区）</p></td></tr>
-				<tr><td><p class=txt><b>1、三河市</b></p></td><td><p class=select><label><input type=radio name="x01" value=4/>优秀</label>&nbsp;<label><input type=radio name="x01" value=3/>良好</label>&nbsp;<label><input type=radio name="x01" value=2/>一般</label>&nbsp;<label><input type=radio name="x01" value=1/>较差</label>&nbsp;<label><input type=radio name="x01" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>2、大厂县</b></p></td><td><p class=select><label><input type=radio name="x02" value=4/>优秀</label>&nbsp;<label><input type=radio name="x02" value=3/>良好</label>&nbsp;<label><input type=radio name="x02" value=2/>一般</label>&nbsp;<label><input type=radio name="x02" value=1/>较差</label>&nbsp;<label><input type=radio name="x02" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>3、香河县</b></p></td><td><p class=select><label><input type=radio name="x03" value=4/>优秀</label>&nbsp;<label><input type=radio name="x03" value=3/>良好</label>&nbsp;<label><input type=radio name="x03" value=2/>一般</label>&nbsp;<label><input type=radio name="x03" value=1/>较差</label>&nbsp;<label><input type=radio name="x03" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>4、广阳区</b></p></td><td><p class=select><label><input type=radio name="x04" value=4/>优秀</label>&nbsp;<label><input type=radio name="x04" value=3/>良好</label>&nbsp;<label><input type=radio name="x04" value=2/>一般</label>&nbsp;<label><input type=radio name="x04" value=1/>较差</label>&nbsp;<label><input type=radio name="x04" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>5、安次区</b></p></td><td><p class=select><label><input type=radio name="x05" value=4/>优秀</label>&nbsp;<label><input type=radio name="x05" value=3/>良好</label>&nbsp;<label><input type=radio name="x05" value=2/>一般</label>&nbsp;<label><input type=radio name="x05" value=1/>较差</label>&nbsp;<label><input type=radio name="x05" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>6、永清县</b></p></td><td><p class=select><label><input type=radio name="x06" value=4/>优秀</label>&nbsp;<label><input type=radio name="x06" value=3/>良好</label>&nbsp;<label><input type=radio name="x06" value=2/>一般</label>&nbsp;<label><input type=radio name="x06" value=1/>较差</label>&nbsp;<label><input type=radio name="x06" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>7、固安县</b></p></td><td><p class=select><label><input type=radio name="x07" value=4/>优秀</label>&nbsp;<label><input type=radio name="x07" value=3/>良好</label>&nbsp;<label><input type=radio name="x07" value=2/>一般</label>&nbsp;<label><input type=radio name="x07" value=1/>较差</label>&nbsp;<label><input type=radio name="x07" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>8、霸州市</b></p></td><td><p class=select><label><input type=radio name="x08" value=4/>优秀</label>&nbsp;<label><input type=radio name="x08" value=3/>良好</label>&nbsp;<label><input type=radio name="x08" value=2/>一般</label>&nbsp;<label><input type=radio name="x08" value=1/>较差</label>&nbsp;<label><input type=radio name="x08" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>9、文安县</b></p></td><td><p class=select><label><input type=radio name="x09" value=4/>优秀</label>&nbsp;<label><input type=radio name="x09" value=3/>良好</label>&nbsp;<label><input type=radio name="x09" value=2/>一般</label>&nbsp;<label><input type=radio name="x09" value=1/>较差</label>&nbsp;<label><input type=radio name="x09" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				<tr><td><p class=txt><b>10、大城县</b></p></td><td><p class=select><label><input type=radio name="x10" value=4/>优秀</label>&nbsp;<label><input type=radio name="x10" value=3/>良好</label>&nbsp;<label><input type=radio name="x10" value=2/>一般</label>&nbsp;<label><input type=radio name="x10" value=1/>较差</label>&nbsp;<label><input type=radio name="x10" value=0 checked />不了解</label>&nbsp;</p></td></tr>
-				
-			<tr><td><p class=sub_sub_title>（二）市直单位</p></td></tr>
 				<tr><td><p class=txt><b>1、市纪委（监察局）</b></p></td><td><p class=select><label><input type=radio name="z01" value=4/>优秀</label>&nbsp;<label><input type=radio name="z01" value=3/>良好</label>&nbsp;<label><input type=radio name="z01" value=2/>一般</label>&nbsp;<label><input type=radio name="z01" value=1/>较差</label>&nbsp;<label><input type=radio name="z01" value=0 checked />不了解</label>&nbsp;</p></td></tr>
 				<tr><td><p class=txt><b>2、市委办公室</b></p></td><td><p class=select><label><input type=radio name="z02" value=4/>优秀</label>&nbsp;<label><input type=radio name="z02" value=3/>良好</label>&nbsp;<label><input type=radio name="z02" value=2/>一般</label>&nbsp;<label><input type=radio name="z02" value=1/>较差</label>&nbsp;<label><input type=radio name="z02" value=0 checked />不了解</label>&nbsp;</p></td></tr>
 				<tr><td><p class=txt><b>3、市政府办公室</b></p></td><td><p class=select><label><input type=radio name="z03" value=4/>优秀</label>&nbsp;<label><input type=radio name="z03" value=3/>良好</label>&nbsp;<label><input type=radio name="z03" value=2/>一般</label>&nbsp;<label><input type=radio name="z03" value=1/>较差</label>&nbsp;<label><input type=radio name="z03" value=0 checked />不了解</label>&nbsp;</p></td></tr>
@@ -140,7 +110,7 @@
 			
 			</table>
 				
-			<p class=sub_title>三、具体评价。请您对评价单位及其工作人员的现实表现提出具体意见和建议。</p>
+			<p class=sub_title>二、具体评价。请对所列评价单位领导班子的现实表现提出具体意见和建议。</p>
 			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见！"></textarea></p>
 			<!--<em>您还可以输入<span id=wordnum class=red>140</span>字。</em>-->
 			<br>
@@ -157,3 +127,4 @@
 	});
 	</script>
 </body>
+</html>
