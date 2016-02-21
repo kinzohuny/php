@@ -6,6 +6,11 @@ if(isset($_SESSION['test'])){
 } else {
 	$_SESSION['test'] = 0;
 }
+
+if(isset($_SESSION['test']) && $_SESSION['test']>= 10 ){
+	session_destroy();
+}
+$tagName = "tag";
 $tag = $_SESSION['test'];
 
 include_once("./smarty/Smarty.class.php"); //包含smarty类文件
@@ -16,7 +21,7 @@ $smarty->caching = false; //缓存方式
 
 $smarty->left_delimiter = "{#";
 $smarty->right_delimiter = "#}";
-$smarty->assign("tag", $tag); //进行模板变量替换
+$smarty->assign($tagName, $tag); //进行模板变量替换
 $smarty->display("template.htm"); //编译并显示位于./templates下的index.htm模板
 
 ?>
