@@ -52,11 +52,11 @@ function sendcode($mobile) {
 	$req = new OpenSmsSendvercodeRequest;
 	$send_ver_code_request = new SendVerCodeRequest;
 	$send_ver_code_request->expire_time="600";
-	$send_ver_code_request->session_limit="60";
-	$send_ver_code_request->session_limit_in_time="3600";
-	$send_ver_code_request->device_limit="5";
-	$send_ver_code_request->device_limit_in_time="3600";
-	$send_ver_code_request->mobile_limit="5";
+	$send_ver_code_request->session_limit="1";
+	$send_ver_code_request->session_limit_in_time="50";
+//	$send_ver_code_request->device_limit="5";
+//	$send_ver_code_request->device_limit_in_time="3600";
+	$send_ver_code_request->mobile_limit="3";
 	$send_ver_code_request->mobile_limit_in_time="3600";
 	// $send_ver_code_request->template_id="123"; 
 	$send_ver_code_request->signature_id="374";
