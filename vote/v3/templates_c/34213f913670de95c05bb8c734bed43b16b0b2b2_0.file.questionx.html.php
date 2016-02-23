@@ -1,0 +1,94 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-02-23 10:17:14
+  from "C:\Users\Kinzo\git\php\vote\v3\templates\questionx.html" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_56cbc12a0c1600_86268929',
+  'file_dependency' => 
+  array (
+    '34213f913670de95c05bb8c734bed43b16b0b2b2' => 
+    array (
+      0 => 'C:\\Users\\Kinzo\\git\\php\\vote\\v3\\templates\\questionx.html',
+      1 => 1456104787,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_56cbc12a0c1600_86268929 ($_smarty_tpl) {
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>廊坊市干部考核社会评价调查系统</title>
+	<link href="./css/main.css" type="text/css" rel="stylesheet">
+	<?php echo '<script'; ?>
+ type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
+>
+</head>
+<body bgcolor=white lang=ZH-CN>
+
+	<div class=main>
+		<form id="user_login" action="" method="post">
+
+			<p class=title align=center>县（市、区）党政领导班子评价</p>
+			<p class=sub_title><b>一、总体评价</b><em class=red>*必填</em></p>
+			<p class="select txt"><label><input type=radio name="x01" value=4/>优秀</label>&nbsp;<label><input type=radio name="x01" value=3/>良好</label>&nbsp;<label><input type=radio name="x01" value=2/>一般</label>&nbsp;<label><input type=radio name="x01" value=1/>较差</label>&nbsp;<label><input type=radio name="x01" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_title><b>二、具体评价</b></p>                                                                                                                                                                                                                  
+			<p class=sub_sub_title><b class=blue>1、您认为本县（市、区）党政领导班子团结协作、共谋发展的状况如何？</b><em class=red>*必填</em></p>                                                                                                                          
+			<p class="select txt"><label><input type=radio name="x02" value=4/>优秀</label>&nbsp;<label><input type=radio name="x02" value=3/>良好</label>&nbsp;<label><input type=radio name="x02" value=2/>一般</label>&nbsp;<label><input type=radio name="x02" value=1/>较差</label>&nbsp;<label><input type=radio name="x02" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>2、您认为本县（市、区）党政领导班子干事创业的精神状态如何？</b><em class=red>*必填</em></p>                                                                                                                                
+			<p class="select txt"><label><input type=radio name="x03" value=4/>优秀</label>&nbsp;<label><input type=radio name="x03" value=3/>良好</label>&nbsp;<label><input type=radio name="x03" value=2/>一般</label>&nbsp;<label><input type=radio name="x03" value=1/>较差</label>&nbsp;<label><input type=radio name="x03" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>3、您认为本县（市、区）党政领导班子谋划发展、引领发展的思路和举措如何？</b><em class=red>*必填</em></p>                                                                                                                    
+			<p class="select txt"><label><input type=radio name="x04" value=4/>优秀</label>&nbsp;<label><input type=radio name="x04" value=3/>良好</label>&nbsp;<label><input type=radio name="x04" value=2/>一般</label>&nbsp;<label><input type=radio name="x04" value=1/>较差</label>&nbsp;<label><input type=radio name="x04" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>4、您认为本县（市、区）党政领导班子抓工作的力度和成效如何？</b><em class=red>*必填</em></p>                                                                                                                                
+			<p class="select txt"><label><input type=radio name="x05" value=4/>优秀</label>&nbsp;<label><input type=radio name="x05" value=3/>良好</label>&nbsp;<label><input type=radio name="x05" value=2/>一般</label>&nbsp;<label><input type=radio name="x05" value=1/>较差</label>&nbsp;<label><input type=radio name="x05" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>5、您认为本县（市、区）党政领导班子党风廉政和廉洁自律情况如何？</b><em class=red>*必填</em></p>                                                                                                                            
+			<p class="select txt"><label><input type=radio name="x06" value=4/>优秀</label>&nbsp;<label><input type=radio name="x06" value=3/>良好</label>&nbsp;<label><input type=radio name="x06" value=2/>一般</label>&nbsp;<label><input type=radio name="x06" value=1/>较差</label>&nbsp;<label><input type=radio name="x06" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_title><b>三、对本县（市、区）党政领导班子和市管干部的意见和建议</b></p>
+			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见和建议！"></textarea></p>
+			
+			<p class=title align=center>县（市、区）民生改善社会调查</p>
+			<p class=sub_sub_title><b class=blue>1、您认为本县（市、区）收入水平如何？</b><em class=red>*必填</em></p>
+			<p class="select txt"><label><input type=radio name="x11" value=4/>满意</label>&nbsp;<label><input type=radio name="x11" value=3/>有改善</label>&nbsp;<label><input type=radio name="x11" value=2/>没变化</label>&nbsp;<label><input type=radio name="x11" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x11" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>2、您认为本县（市、区）物价水平如何？</b><em class=red>*必填</em></p>                                                                                                                                                          
+			<p class="select txt"><label><input type=radio name="x12" value=4/>满意</label>&nbsp;<label><input type=radio name="x12" value=3/>有改善</label>&nbsp;<label><input type=radio name="x12" value=2/>没变化</label>&nbsp;<label><input type=radio name="x12" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x12" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>3、您认为本县（市、区）就医方便程度如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
+			<p class="select txt"><label><input type=radio name="x13" value=4/>满意</label>&nbsp;<label><input type=radio name="x13" value=3/>有改善</label>&nbsp;<label><input type=radio name="x13" value=2/>没变化</label>&nbsp;<label><input type=radio name="x13" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x13" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>4、您认为本县（市、区）就业状况如何？</b><em class=red>*必填</em></p>                                                                                                                                                          
+			<p class="select txt"><label><input type=radio name="x14" value=4/>满意</label>&nbsp;<label><input type=radio name="x14" value=3/>有改善</label>&nbsp;<label><input type=radio name="x14" value=2/>没变化</label>&nbsp;<label><input type=radio name="x14" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x14" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>5、您认为本县（市、区）就学方便程度如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
+			<p class="select txt"><label><input type=radio name="x15" value=4/>满意</label>&nbsp;<label><input type=radio name="x15" value=3/>有改善</label>&nbsp;<label><input type=radio name="x15" value=2/>没变化</label>&nbsp;<label><input type=radio name="x15" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x15" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>6、您认为本县（市、区）交通便捷程度如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
+			<p class="select txt"><label><input type=radio name="x16" value=4/>满意</label>&nbsp;<label><input type=radio name="x16" value=3/>有改善</label>&nbsp;<label><input type=radio name="x16" value=2/>没变化</label>&nbsp;<label><input type=radio name="x16" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x16" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>7、您认为本县（市、区）社会治安状况如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
+			<p class="select txt"><label><input type=radio name="x17" value=4/>满意</label>&nbsp;<label><input type=radio name="x17" value=3/>有改善</label>&nbsp;<label><input type=radio name="x17" value=2/>没变化</label>&nbsp;<label><input type=radio name="x17" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x17" value=0 />不了解</label>&nbsp;</p>
+			<p class=sub_sub_title><b class=blue>8、您认为本县（市、区）环境质量情况如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
+			<p class="select txt"><label><input type=radio name="x18" value=4/>满意</label>&nbsp;<label><input type=radio name="x18" value=3/>有改善</label>&nbsp;<label><input type=radio name="x18" value=2/>没变化</label>&nbsp;<label><input type=radio name="x18" value=1/>不如以前</label>&nbsp;<label><input type=radio name="x18" value=0 />不了解</label>&nbsp;</p>
+			<p class="sub_sub_title"><b>9、对本县（市、区）民生改善情况的意见和建议</b></p>
+			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见和建议！"></textarea></p>
+			<br>
+			<input type=hidden name=step value=selectcounty />
+			<input class=btn type="submit" value="提交问卷" />
+			<!-- <input class=btn type="button" value="提交问卷" onClick='location.href = "thanks.html";' /> -->
+		</form>
+	</div>
+	<?php echo '<script'; ?>
+ type="text/javascript">
+	$(function(){
+		$("#suggesttext").keyup(function(){
+			if($(this).val().length > 999){
+				$(this).val($(this).val().substring(0,1000));
+			}
+		});
+	});
+	<?php echo '</script'; ?>
+>
+</body>
+</html><?php }
+}

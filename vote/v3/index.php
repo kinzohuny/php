@@ -4,19 +4,19 @@ session_start();
 if(isset($_SESSION['mobile'])){
 	if(isset($_POST['step']) && $_POST['step']=="baseinfo"){
 		if(checkBaseinfo()){
-			showSelect();
+			showSelect(null);
 		}
 	}elseif(isset($_POST['step']) && $_POST['step']=="select"){
 		if(checkSelect()){
 			if(isset($_POST['select']) && $_POST['select']==2){
-				showSelectCounty();
+				showSelectCounty(null);
 			}else{
-				showQuestionz();
+				showQuestionz(null);
 			}
 		}
 	}elseif(isset($_POST['step']) && $_POST['step']=="selectcounty"){
 		if(checkSelectCounty()){
-			showQuestionx();
+			showQuestionx(null);
 		}
 	}elseif(isset($_POST['step']) && $_POST['step']=="questionz"){
 		if(checkQuestionz()){
@@ -27,10 +27,10 @@ if(isset($_SESSION['mobile'])){
 			showThanks();
 		}
 	}else{
-			showBaseinfo();
+			showBaseinfo(null);
 	}
 }else{
-	showMobile();
+	showMobile(null);
 }
 
 function checkQuestionz(){
@@ -54,7 +54,10 @@ function checkSelect(){
 }
 
 function checkBaseinfo(){
-	
+	if(1 == 2 ){
+		showBaseinfo(null);
+		return false;
+	}
 	return true;
 }
 
@@ -62,28 +65,28 @@ function showThanks(){
 	showPage(null, "thanks.html");
 }
 
-function showQuestionz(){
-	showPage(null, "questionz.html");
+function showQuestionz($args){
+	showPage($args, "questionz.html");
 }
 
-function showQuestionx(){
-	showPage(null, "questionx.html");
+function showQuestionx($args){
+	showPage($args, "questionx.html");
 }
 
-function showSelectCounty(){
-	showPage(null, "selectcounty.html");
+function showSelectCounty($args){
+	showPage($args, "selectcounty.html");
 }
 
-function showSelect(){
-	showPage(null, "select.html");
+function showSelect($args){
+	showPage($args, "select.html");
 }
 
-function showBaseinfo(){
-	showPage(null, "baseinfo.html");
+function showBaseinfo($args){
+	showPage($args, "baseinfo.html");
 }
 
-function showMobile(){
-	showPage(null, "mobile.html");
+function showMobile($args){
+	showPage($args, "mobile.html");
 }
 
 
