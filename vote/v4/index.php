@@ -9,6 +9,7 @@ if(isset($_SESSION['mobile'])){
 	exit;
 }else{
 	//$_SESSION['token']=md5(time() . mt_rand(1,1000000));
+
 }
 
 ?>
@@ -29,6 +30,7 @@ if(isset($_SESSION['mobile'])){
 <div class="main">
 <br><br>
 <table class=mobile>
+<tr><td><p class=sub_title>校验码：</p></td><td><input class=sub_title id="validate"/></td><td><img  class=sub_title title="点击刷新" src="captcha.php" align="absbottom" onclick="this.src='captcha.php?'+Math.random();"></img></td></tr>
 <tr><td><p class=sub_title>手机号码：</p></td><td><input class=sub_title id="mobile" value="<?php if(isset($_SESSION['temp_mobile'])){echo $_SESSION['temp_mobile'];} ?>"/></td><td><input class=sub_title id="second" type="button"  value="获取验证码" /></td></tr>
 <tr><td></td><td colspan=2><em class=error id=msg1>&nbsp;</em></td></tr>
 <tr><td><p class=sub_title>验证码：</p></td><td><input  class=sub_title id="code" /></td></tr>

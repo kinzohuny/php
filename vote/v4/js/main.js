@@ -56,7 +56,13 @@ function sendCode() {
 	var mobile = $("#mobile").val();
 	var result = isMobile(mobile);
 	if (result) {
-		doPostBack('mobile.php', afterSendCode, {"mobile":mobile});
+		var validate = $("#validate").val();
+		result = isValidate(validate);
+		if (result){
+			doPostBack('mobile.php', afterSendCode, {"mobile":mobile,"validate":validate});
+		} else {
+			$("#msg1").html('校验码不正确！');
+		}
 	} else {
 		$("#msg1").html('请输入有效的手机号码！');
 	}
@@ -122,6 +128,15 @@ function settime(obj) {
 	setTimeout(function () {
 		settime(obj)
 	}, 1000) //每1000毫秒执行一次
+}
+//校验码是否合法
+function isValidate(validate) {
+	var myreg = /^([0-9a-zA-Z]{4})$/;
+	if (!myreg.test(validate)) {
+		return false;
+	} else {
+		return true;
+	}
 }
 //校验手机号是否合法
 function isMobile(mobile) {

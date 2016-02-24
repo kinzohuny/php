@@ -28,27 +28,35 @@ if(isset($_POST["code"])){
 		echo '{"success":false,"msg":"手机验证码不正确！"}';
 	}
 }elseif(isset($_POST["mobile"])){
-	$temp_mobile=$_POST["mobile"];
-	if (isMobile($temp_mobile)) {
-		if(!existMobile($temp_mobile)){
-			$_SESSION['temp_mobile']=$temp_mobile;
-			$result = sendcode($temp_mobile);
-			if($result){
-				$result = (array)$result;
-				if($result['successful']=="true"){
-					echo '{"success":true,"msg":""}';
+	$validate=$_POST["validate"];
+	if(isset($validate) && strtolower($_SESSION['authnum_session'])==strtolower($validate)){
+		$temp_mobile=$_POST["mobile"];
+		if (isMobile($temp_mobile)) {
+			if(!existMobile($temp_mobile)){
+				$_SESSION['temp_mobile']=$temp_mobile;
+				$result = sendcode($temp_mobile);
+				if($result){
+					$result = (array)$result;
+					if($result['successful']=="true"){
+						echo '{"success":true,"msg":""}';
+					}else{
+						echo '{"success":false,"msg":"'.$result['message'].'"}';
+					}
 				}else{
-					echo '{"success":false,"msg":"'.$result['message'].'"}';
+					echo '{"success":false,"msg":"发送失败！"}';
 				}
 			}else{
-				echo '{"success":false,"msg":"发送失败！"}';
+				echo '{"success":false,"msg":"该手机号已填写过该问卷！"}';
 			}
-		}else{
-			echo '{"success":false,"msg":"该手机号已填写过该问卷！"}';
+		}else {
+			echo '{"success":false,"msg":"手机号格式不正确！"}';
 		}
-	}else {
-		echo '{"success":false,"msg":"手机号格式不正确！"}';
+	}else{
+		echo '{"success":false,"msg":"校验码不正确！"}';
 	}
+	
+	
+
 }else{
 	echo '{"success":false,"msg":"非法请求"}';
 }
