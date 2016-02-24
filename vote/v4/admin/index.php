@@ -29,8 +29,8 @@
 			if (!$con){
 				die('Could not connect: ' . mysql_error());
 			}
-			mysql_query("set character set 'utf8'");//读库
-			mysql_query("set names 'utf8'");//写库
+			mysql_query("set character set 'utf-8'");//读库
+			mysql_query("set names 'utf-8'");//写库
 			mysql_select_db("vote", $con);
 			
 			//汇总数据

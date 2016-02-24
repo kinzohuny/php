@@ -32,11 +32,16 @@ if(isset($_POST["code"])){
 	if (isMobile($temp_mobile)) {
 		if(!existMobile($temp_mobile)){
 			$_SESSION['temp_mobile']=$temp_mobile;
-			$msg = sendcode($temp_mobile);
-			if(empty($msg)){
-				echo '{"success":"true","msg":""}';
+			$result = sendcode($temp_mobile);
+			if($result){
+				$result = (array)$result;
+				if($result['successful']=="true"){
+					echo '{"success":true,"msg":""}';
+				}else{
+					echo '{"success":false,"msg":"'.$result['message'].'"}';
+				}
 			}else{
-				echo '{"success":"false","msg":'.$msg.'}';
+				echo '{"success":false,"msg":"发送失败！"}';
 			}
 		}else{
 			echo '{"success":false,"msg":"该手机号已填写过该问卷！"}';
@@ -62,30 +67,28 @@ function sendcode($mobile) {
 //	$send_ver_code_request->device_limit_in_time="3600";
 	$send_ver_code_request->mobile_limit="5";
 	$send_ver_code_request->mobile_limit_in_time="3600";
-	$send_ver_code_request->template_id="2712"; 
+// 	$send_ver_code_request->template_id="2712"; 
 	$send_ver_code_request->signature_id="374";
 	$send_ver_code_request->mobile=$mobile;
 	$send_ver_code_request->ver_code_length="6";
 	$req->setSendVerCodeRequest(json_encode($send_ver_code_request));
 	$resp = $c->execute($req);
-	return $resp->msg;
+	return $resp->result;
 }
 //验证手机验证码
 function checkcode($mobile,$code){
-	if (!empty($code)) {
-		$c = new TopClient;
-		$c->appkey = $GLOBALS['appkey'];
-		$c->secretKey = $GLOBALS['secret'];
-		$req = new OpenSmsCheckvercodeRequest;
-		$check_ver_code_request = new CheckVerCodeRequest;
-		$check_ver_code_request->check_fail_limit="8";
-		$check_ver_code_request->check_success_limit="2"; 
-		$check_ver_code_request->ver_code=$code;
-		$check_ver_code_request->mobile=$mobile;
-		$req->setCheckVerCodeRequest(json_encode($check_ver_code_request));
-		$resp = $c->execute($req); 
-		return $resp->result;
-	}
+	$c = new TopClient;
+	$c->appkey = $GLOBALS['appkey'];
+	$c->secretKey = $GLOBALS['secret'];
+	$req = new OpenSmsCheckvercodeRequest;
+	$check_ver_code_request = new CheckVerCodeRequest;
+	$check_ver_code_request->check_fail_limit="8";
+	$check_ver_code_request->check_success_limit="2"; 
+	$check_ver_code_request->ver_code=$code;
+	$check_ver_code_request->mobile=$mobile;
+	$req->setCheckVerCodeRequest(json_encode($check_ver_code_request));
+	$resp = $c->execute($req); 
+	return $resp->result;
 }
 
 /**

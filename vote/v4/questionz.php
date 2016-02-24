@@ -28,8 +28,8 @@ function saveQuestionz(){
 	if (!$con){
 		die('Could not connect: ' . mysql_error());
 	}
-	mysql_query("set character set 'utf8'");//读库
-	mysql_query("set names 'utf8'");//写库
+	mysql_query("set character set 'utf-8'");//读库
+	mysql_query("set names 'utf-8'");//写库
 	mysql_select_db("vote", $con);
 	if(!mysql_query("insert into `vote`.`vote_baseinfo` (`mobile`, `sex`, `age`, `profession`, `city`, `county`, `created`, `ip`)values ('".$_SESSION['mobile']."', '".$_SESSION['sex']."', '".$_SESSION['age']."', '".$_SESSION['profession']."', 1, 0, now(), '".getip()."');")){
 		die('Error: ' . mysql_error());
