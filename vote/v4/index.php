@@ -8,7 +8,7 @@ if(isset($_SESSION['mobile'])){
 	Header("Location:./thanks.html");
 	exit;
 }else{
-	$_SESSION['token']=md5(time() . mt_rand(1,1000000));
+	//$_SESSION['token']=md5(time() . mt_rand(1,1000000));
 }
 
 ?>

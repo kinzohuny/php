@@ -7,10 +7,14 @@ if(!isset($_SESSION['mobile'])){
 }elseif(isset($_SESSION['finished'])){
 	Header("Location:./thanks.html");
 	exit;
+}elseif(!isset($_SESSION['sex']) || !isset($_SESSION['age']) || !isset($_SESSION['profession'])){
+	Header("Location:./baseinfo.php");
+	exit;
 }elseif(isset($_POST['step'])&&$_POST['step']=='select'){
 	//save value to session
+	$_SESSION['select']=$_POST['select'];
 	
-	if(isset($_POST[select])&&$_POST[select]==2){
+	if(isset($_SESSION['select'])&&$_SESSION['select']==2){
 		Header("Location:./selectcounty.php");
 		exit;
 	}else{
