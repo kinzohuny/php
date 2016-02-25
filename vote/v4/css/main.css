@@ -8,7 +8,7 @@ table.mobile {margin: 0px auto;}
 .sub_sub_title {font-size:14.0pt;font-family:宋体;text-indent: 2em;margin-top: 12px; margin-bottom: 6px;}
 .txt {font-size:14.0pt;font-family:宋体;text-indent: 4em;margin-top: 4px; margin-bottom: 4px;}
 .select {margin-top: 4px; margin-bottom: 4px;}
-.error {color:#FF0000;font-size:14.0pt;font-family:宋体;text-indent: 2em;margin-top:0px; margin-bottom: 4px;}
+.error {color:#FF0000;font-size:14.0pt;font-family:宋体;margin-top:0px; margin-bottom: 4px;}
 textarea {width:600px;height:80px;resize:none;}
 
 .hidden {display: none;}

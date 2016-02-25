@@ -28,8 +28,7 @@ if(isset($_POST["code"])){
 		echo '{"success":false,"msg":"手机验证码不正确！"}';
 	}
 }elseif(isset($_POST["mobile"])){
-	$validate=$_POST["validate"];
-	if(isset($validate) && strtolower($_SESSION['authnum_session'])==strtolower($validate)){
+	if(checkValidate($_POST["validate"])){
 		$temp_mobile=$_POST["mobile"];
 		if (isMobile($temp_mobile)) {
 			if(!existMobile($temp_mobile)){
@@ -52,7 +51,7 @@ if(isset($_POST["code"])){
 			echo '{"success":false,"msg":"手机号格式不正确！"}';
 		}
 	}else{
-		echo '{"success":false,"msg":"校验码不正确！"}';
+		echo '{"success":false,"v_msg":"图片校验码不正确！"}';
 	}
 	
 	
@@ -124,6 +123,16 @@ function checkcode($mobile,$code){
  	$exist = (mysql_num_rows($result));
  	mysql_close($con);
  	return $exist;
+ }
+ 
+ function checkValidate($validate){
+ 	if(isset($validate) && strtolower($_SESSION['authnum_session'])==strtolower($validate)){
+ 		$result = true;
+ 	}else{
+ 		$result = false;
+ 	}
+ 	$_SESSION['authnum_session']=null;
+ 	return $result;
  }
  
  function checkToken(){

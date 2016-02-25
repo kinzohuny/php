@@ -61,21 +61,27 @@ function sendCode() {
 		if (result){
 			doPostBack('mobile.php', afterSendCode, {"mobile":mobile,"validate":validate});
 		} else {
-			$("#msg1").html('校验码不正确！');
+			errorShow("validate_error","请输入图片校验码！");
 		}
 	} else {
-		$("#msg1").html('请输入有效的手机号码！');
+		errorShow("mobile_error","请输入有效的手机号码！");
 	}
 }
 //验证码发送结果处理
 function afterSendCode(data) {
+	$("#validate_img").click();
+	$("#validate").val("");
 	var d = $.parseJSON(data);
 	if (!d.success) {
-		$("#msg1").html(d.msg);
+		if(d.v_msg!=null){
+			errorShow("validate_error",d.v_msg);
+		}else{
+			errorShow("mobile_error",d.msg);
+		}
 	} else { //返回验证码
 		addCookie("secondsremained", 60, 60); //添加cookie记录,有效时间60s
 		settime($("#second")); //开始倒计时
-		$("#msg1").html('验证码已发送！');
+		errorShow("mobile_error","手机验证码已发送！");
 	}
 }
 //提交
@@ -85,14 +91,14 @@ function checkcode(obj) {
 	if (result) {
 		doPostBack('mobile.php', afterCheckcode, { "code":code});
 	} else {
-		$("#msg2").html('验证码格式不正确！');
+		errorShow("code_error","验证码格式不正确！");
 	}
 }
 //提交结果处理
 function afterCheckcode(data) {
 	var d = $.parseJSON(data);
 	if (!d.success) {
-		$("#msg2").html(d.msg);
+		errorShow("code_error",d.msg);
 	} else { //页面跳转
 		window.location.href = "baseinfo.php";
 	}
@@ -117,7 +123,7 @@ function settime(obj) {
 	countdown = getCookieValue("secondsremained");
 	if (countdown == 0) {
 		obj.removeAttr("disabled");
-		obj.val("重新发送验证码");
+		obj.val("发送验证码");
 		return;
 	} else {
 		obj.attr("disabled", true);
@@ -129,6 +135,11 @@ function settime(obj) {
 		settime(obj)
 	}, 1000) //每1000毫秒执行一次
 }
+
+function errorShow(id,error){
+	$("#"+id).html(error).show(300).delay(3000).hide(300);
+}
+
 //校验码是否合法
 function isValidate(validate) {
 	var myreg = /^([0-9a-zA-Z]{4})$/;
