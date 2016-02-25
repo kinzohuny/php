@@ -64,6 +64,7 @@ function getip() {
 	<title>廊坊市干部考核社会评价调查系统</title>
 	<link href="./css/main.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/check.js"></script>
 </head>
 <body bgcolor=white lang=ZH-CN>
 	<p class=title align=center>
@@ -166,22 +167,11 @@ function getip() {
 			</table>
 				
 			<p class=sub_title><b>二、具体评价。请对所列评价单位领导班子的现实表现提出具体意见和建议。</b></p>
-			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见！"></textarea></p>
-			<!--<em>您还可以输入<span id=wordnum class=red>140</span>字。</em>-->
+			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见！" onpropertychange="checkMaxLen(this,2000);" oninput="checkMaxLen(this,2000);"></textarea></p>
 			<br>
 			<input type=hidden name=step value=questionz />
 			<div class=center><input class=btn type="submit" value="提交问卷" /></div>
-			<!-- <input class=btn type="button" value="提交问卷" onClick='location.href = "thanks.html";' /> -->
 		</form>
 	</div>
-	<script type="text/javascript">
-	$(function(){
-		$("#suggesttext").keyup(function(){
-			if($(this).val().length > 999){
-				$(this).val($(this).val().substring(0,1000));
-			}
-		});
-	});
-	</script>
 </body>
 </html>

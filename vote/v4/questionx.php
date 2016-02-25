@@ -95,7 +95,7 @@ function getip() {
 			<p class=sub_sub_title id=x06_point><b class=blue>5、您认为本县（市、区）党政领导班子党风廉政和廉洁自律情况如何？</b><em class=red>*必填</em></p>                                                                                                                            
 			<p class="select txt" id=x06_error><label><input type=radio name="x06" value=4 />优秀</label>&nbsp;<label><input type=radio name="x06" value=3 />良好</label>&nbsp;<label><input type=radio name="x06" value=2 />一般</label>&nbsp;<label><input type=radio name="x06" value=1 />较差</label>&nbsp;<label><input type=radio name="x06" value=0 />不了解</label>&nbsp;</p>
 			<p class=sub_title><b>三、对本县（市、区）党政领导班子和市管干部的意见和建议</b></p>
-			<p class=txt><textarea name=suggest0 id=suggesttext placeholder="请输入您的意见和建议！"></textarea></p>
+			<p class=txt><textarea name=suggest0 id=suggesttext placeholder="请输入您的意见和建议！" onpropertychange="checkMaxLen(this,2000);" oninput="checkMaxLen(this,2000);"></textarea></p>
 			
 			<p class=title align=center>县（市、区）民生改善社会调查</p>
 			<p class=sub_sub_title id=x11_point><b class=blue>1、您认为本县（市、区）收入水平如何？</b><em class=red>*必填</em></p>
@@ -115,21 +115,11 @@ function getip() {
 			<p class=sub_sub_title id=x18_point><b class=blue>8、您认为本县（市、区）环境质量情况如何？</b><em class=red>*必填</em></p>                                                                                                                                                      
 			<p class="select txt" id=x18_error><label><input type=radio name="x18" value=4 />满意</label>&nbsp;<label><input type=radio name="x18" value=3 />有改善</label>&nbsp;<label><input type=radio name="x18" value=2 />没变化</label>&nbsp;<label><input type=radio name="x18" value=1 />不如以前</label>&nbsp;<label><input type=radio name="x18" value=0 />不了解</label>&nbsp;</p>
 			<p class="sub_sub_title"><b>9、对本县（市、区）民生改善情况的意见和建议</b></p>
-			<p class=txt><textarea name=suggest1 id=suggesttext placeholder="请输入您的意见和建议！"></textarea></p>
+			<p class=txt><textarea name=suggest1 id=suggesttext placeholder="请输入您的意见和建议！" onpropertychange="checkMaxLen(this,2000);" oninput="checkMaxLen(this,2000);"></textarea></p>
 			<br>
 			<input type=hidden name=step value=questionx />
 			<div class=center><input class=btn type="submit" value="提交问卷" /></div>
-			<!-- <input class=btn type="button" value="提交问卷" onClick='location.href = "thanks.html";' /> -->
 		</form>
 	</div>
-	<script type="text/javascript">
-	$(function(){
-		$("#suggesttext").keyup(function(){
-			if($(this).val().length > 999){
-				$(this).val($(this).val().substring(0,1000));
-			}
-		});
-	});
-	</script>
 </body>
 </html>

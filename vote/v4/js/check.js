@@ -66,3 +66,9 @@ function normal(id,times)
     times=times-1;    
     setTimeout("error('"+id+"',"+times+")",150);    
 }   
+
+function checkMaxLen(obj,maxlength){
+	if(obj.value.length>maxlength){
+		obj.value = obj.value.substr(0,maxlength);
+	}
+}
