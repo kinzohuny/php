@@ -30,6 +30,7 @@ if(!isset($_SESSION['mobile'])){
 	<title>廊坊市干部考核社会评价调查系统</title>
 	<link href="./css/main.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/check.js"></script>
 </head>
 <body>
 	<p class=title align=center>
@@ -37,9 +38,9 @@ if(!isset($_SESSION['mobile'])){
 	</p>
 
 	<div class=main>
-		<form id="user_login" action="" method="post">
+		<form id="user_login" action="" method="post" onsubmit="return checkMust(['select']);">
 			<p class=sub_title><b>请选择市直单位或县（市、区）进行评价。</b></p>
-			<p class="sub_sub_title em2">
+			<p class="sub_sub_title em2" id=select_error>
 				<label><input type=radio name=select value=1 onClick='$("#result").val("questionz.html");' />市直单位</label>&nbsp;&nbsp;&nbsp;
 				<label><input type=radio name=select value=2 onClick='$("#result").val("selectcounty.html");' />县（市、区）</label>
 			</p>
