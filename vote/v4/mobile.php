@@ -74,7 +74,7 @@ function sendcode($mobile) {
 //	$send_ver_code_request->device_limit_in_time="3600";
 	$send_ver_code_request->mobile_limit="5";
 	$send_ver_code_request->mobile_limit_in_time="3600";
-// 	$send_ver_code_request->template_id="2712"; 
+	$send_ver_code_request->template_id="2712"; 
 	$send_ver_code_request->signature_id="374";
 	$send_ver_code_request->mobile=$mobile;
 	$send_ver_code_request->ver_code_length="6";
