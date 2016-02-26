@@ -11,6 +11,8 @@ if(isset($_POST["code"])){
 	//验证验证码正确
 	$code=$_POST["code"];
 	if (isset($_SESSION['temp_mobile']) && !empty($code) && strlen($code)==6 ) {
+//		$_SESSION['mobile']=$_SESSION['temp_mobile'];
+// 		echo '{"success":true,"msg":""}';
 		$result = checkcode($_SESSION['temp_mobile'],$code);
 		if($result){
 			$result = (array)$result;
@@ -32,7 +34,8 @@ if(isset($_POST["code"])){
 		$temp_mobile=$_POST["mobile"];
 		if (isMobile($temp_mobile)) {
 			if(!existMobile($temp_mobile)){
-				$_SESSION['temp_mobile']=$temp_mobile;
+ 				$_SESSION['temp_mobile']=$temp_mobile;
+// 				echo '{"success":true,"msg":""}';
 				$result = sendcode($temp_mobile);
 				if($result){
 					$result = (array)$result;
@@ -72,14 +75,16 @@ function sendcode($mobile) {
 	$send_ver_code_request->session_limit_in_time="50";
 //	$send_ver_code_request->device_limit="5";
 //	$send_ver_code_request->device_limit_in_time="3600";
-	$send_ver_code_request->mobile_limit="5";
-	$send_ver_code_request->mobile_limit_in_time="3600";
+// 	$send_ver_code_request->mobile_limit="5";
+// 	$send_ver_code_request->mobile_limit_in_time="3600";
 	$send_ver_code_request->template_id="2712"; 
 	$send_ver_code_request->signature_id="374";
 	$send_ver_code_request->mobile=$mobile;
 	$send_ver_code_request->ver_code_length="6";
 	$req->setSendVerCodeRequest(json_encode($send_ver_code_request));
+	info_log("sendCode_req:mobile=".$mobile);
 	$resp = $c->execute($req);
+	info_log("sendCode_resp:".$resp->result->asXML());
 	return $resp->result;
 }
 //验证手机验证码
@@ -89,12 +94,14 @@ function checkcode($mobile,$code){
 	$c->secretKey = $GLOBALS['secret'];
 	$req = new OpenSmsCheckvercodeRequest;
 	$check_ver_code_request = new CheckVerCodeRequest;
-	$check_ver_code_request->check_fail_limit="8";
-	$check_ver_code_request->check_success_limit="2"; 
+	$check_ver_code_request->check_fail_limit="9";
+	$check_ver_code_request->check_success_limit="3"; 
 	$check_ver_code_request->ver_code=$code;
 	$check_ver_code_request->mobile=$mobile;
 	$req->setCheckVerCodeRequest(json_encode($check_ver_code_request));
+	info_log("checkCode_req:mobile=".$mobile.",code=".$code);
 	$resp = $c->execute($req); 
+	info_log("checkCode_resp:".$resp->result->asXML());
 	return $resp->result;
 }
 
@@ -141,6 +148,10 @@ function checkcode($mobile,$code){
  	}else{
  		return false;
  	}
+ }
+ 
+ function info_log($log){
+ 	error_log(date('[y-m-d h:i:s]',time()).$log."\r\n", 3, "./log/sms.log");
  }
 ?>
 
