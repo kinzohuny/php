@@ -166,7 +166,7 @@ function getip() {
 
 			</table>
 				
-			<p class=sub_title><b>二、具体评价。请对所列评价单位领导班子的现实表现提出具体意见和建议。</b></p>
+			<p class=sub_title><b>二、具体评价。对所列评价单位领导班子和市委管理干部提出的意见和建议。</b></p>
 			<p class=txt><textarea name=suggest id=suggesttext placeholder="请输入您的意见！" onpropertychange="checkMaxLen(this,2000);" oninput="checkMaxLen(this,2000);"></textarea></p>
 			<br>
 			<input type=hidden name=step value=questionz />

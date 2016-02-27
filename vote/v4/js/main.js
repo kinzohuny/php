@@ -123,7 +123,7 @@ function settime(obj) {
 	countdown = getCookieValue("secondsremained");
 	if (countdown == 0) {
 		obj.removeAttr("disabled");
-		obj.val("发送验证码");
+		obj.val("点击此处，获取验证码");
 		return;
 	} else {
 		obj.attr("disabled", true);

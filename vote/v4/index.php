@@ -31,9 +31,9 @@ if(isset($_SESSION['mobile'])){
 <div class="main">
 <br><br>
 <table class=mobile>
-<tr><td><p class=sub_title>手机号码：</p></td><td><input class=sub_title id="mobile" onkeyup="numCtrl(this,11);" value="<?php if(isset($_SESSION['temp_mobile'])){echo $_SESSION['temp_mobile'];} ?>"/></td><td><input class=sub_title id="second" type="button"  value="发送验证码" /></td></tr>
+<tr><td><p class=sub_title>手机号码：</p></td><td><input class=sub_title id="mobile" onkeyup="numCtrl(this,11);" value="<?php if(isset($_SESSION['temp_mobile'])){echo $_SESSION['temp_mobile'];} ?>"/></td><td><input class=sub_title id="second" type="button"  value="点击此处，获取验证码" /></td></tr>
 <tr><td></td><td colspan=2><em class=error id=mobile_error></em></td></tr>
-<tr><td><p class=sub_title>图片校验码：</p></td><td><input class=sub_title id="validate" onkeyup="charCtrl(this,4);" /></td><td><img class=sub_title id="validate_img" title="点击刷新" src="captcha.php" align="absbottom" onclick="this.src='captcha.php?'+Math.random();"></img></td></tr>
+<tr><td><p class=sub_title>校验码：</p></td><td><input class=sub_title id="validate" onkeyup="charCtrl(this,4);" /></td><td><img class=sub_title id="validate_img" title="点击刷新" src="captcha.php" align="absbottom" onclick="this.src='captcha.php?'+Math.random();"></img><em>不区分大小写</em></td></tr>
 <tr><td></td><td colspan=2><em class=error id=validate_error></em></td></tr>
 <tr><td><p class=sub_title>手机验证码：</p></td><td><input class=sub_title id="code" onkeyup="numCtrl(this,6);" /></td></tr>
 <tr><td></td><td colspan=2><em class=error id=code_error></em></td></tr>

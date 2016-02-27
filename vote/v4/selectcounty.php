@@ -35,18 +35,19 @@ if(!isset($_SESSION['mobile'])){
 		<form id="user_login" action="" method="post" onsubmit="return checkMust(['selectcounty']);">
 			<p class="center sub_title" id=selectcounty_error>
 				<br>
-				<label><input type=radio name=selectcounty value=1 /><b>三河市</b></label>
-				<label><input type=radio name=selectcounty value=2 /><b>大厂县</b></label><br><br>
-				<label><input type=radio name=selectcounty value=3 /><b>香河县</b></label>
-				<label><input type=radio name=selectcounty value=4 /><b>广阳区</b></label><br><br>
-				<label><input type=radio name=selectcounty value=5 /><b>安次区</b></label>
-				<label><input type=radio name=selectcounty value=6 /><b>永清县</b></label><br><br>
-				<label><input type=radio name=selectcounty value=7 /><b>固安县</b></label>
-				<label><input type=radio name=selectcounty value=8 /><b>霸州市</b></label><br><br>
-				<label><input type=radio name=selectcounty value=9 /><b>文安县</b></label>
-				<label><input type=radio name=selectcounty value=10 /><b>大城县</b></label><br>
+				<label><input type=radio name=selectcounty value=1 />三河市</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=selectcounty value=2 />大厂县</label><br><br>
+				<label><input type=radio name=selectcounty value=3 />香河县</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=selectcounty value=4 />广阳区</label><br><br>
+				<label><input type=radio name=selectcounty value=5 />安次区</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=selectcounty value=6 />永清县</label><br><br>
+				<label><input type=radio name=selectcounty value=7 />固安县</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=selectcounty value=8 />霸州市</label><br><br>
+				<label><input type=radio name=selectcounty value=9 />文安县</label>&nbsp;&nbsp;&nbsp;
+				<label><input type=radio name=selectcounty value=10 />大城县</label><br>
 			</p>
-			<p class=red>*注：每个手机号只限评价一个选项。</p>
+			<br>
+			<p class="red center">*注：每个手机号只限评价一个选项。</p>
 			<br>
 			<input type=hidden name=step value=selectcounty />
 			<div class=center><input class=btn type="submit" value="下一步" /></div>
