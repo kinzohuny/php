@@ -39,7 +39,7 @@ function checkRadio(name,isMove){
 		}
 	}
 	if(isMove){
-		$("html,body").animate({scrollTop:$("#"+name+"_point").offset().top},50)
+		$("html,body").animate({scrollTop:$("#"+name+"_point").offset().top},50);
 	}
 	error(name+"_error",3);
 	return false;

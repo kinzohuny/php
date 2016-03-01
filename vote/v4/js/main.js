@@ -50,7 +50,7 @@ $(function () {
 	if (v > 0) {
 		settime($("#second")); //开始倒计时
 	}
-})
+});
 //发送验证码
 function sendCode() {
 	var mobile = $("#mobile").val();
@@ -132,8 +132,8 @@ function settime(obj) {
 		editCookie("secondsremained", countdown, countdown + 1);
 	}
 	setTimeout(function () {
-		settime(obj)
-	}, 1000) //每1000毫秒执行一次
+		settime(obj);
+	}, 1000); //每1000毫秒执行一次
 }
 
 function errorShow(id,error){
