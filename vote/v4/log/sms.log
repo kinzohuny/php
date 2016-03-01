@@ -6,3 +6,7 @@
 [16-02-26 11:51:54]sendCode_resp:<result><code>1</code><datas><sms_size>1</sms_size><task_id>877305356458713890</task_id></datas><message>SUCCESS</message><successful>true</successful></result>
 [16-02-26 11:52:24]checkCode_req:mobile=13121157003,code=720243
 [16-02-26 11:52:24]checkCode_resp:<result><code>1</code><message>SUCCESS</message><successful>true</successful></result>
+[16-02-29 07:32:18]sendCode_req:mobile=13601243550
+[16-02-29 07:32:18]sendCode_resp:<result><code>1</code><datas><sms_size>1</sms_size><task_id>605023756745539623</task_id></datas><message>SUCCESS</message><successful>true</successful></result>
+[16-02-29 07:32:25]checkCode_req:mobile=13601243550,code=123456
+[16-02-29 07:32:25]checkCode_resp:<result><code>10003</code><message>验证码错误，请重新输入</message><successful>false</successful></result>

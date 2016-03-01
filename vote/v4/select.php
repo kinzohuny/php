@@ -39,12 +39,12 @@ if(!isset($_SESSION['mobile'])){
 
 	<div class=main>
 		<form id="user_login" action="" method="post" onsubmit="return checkMust(['select']);">
-			<p class="sub_title lineheight2"><b>请选择市直单位或县（市、区）进行评价。</b></p>
-			<p class="sub_title lineheight2 em2" id=select_error>
+			<p class="sub_title lineheight3 font24"><b>请选择市直单位或县（市、区）进行评价。</b></p>
+			<p class="sub_title lineheight3 em2 font22" id=select_error>
 				<label><input type=radio name=select value=1 onClick='$("#result").val("questionz.html");' />市直单位</label>&nbsp;&nbsp;&nbsp;
 				<label><input type=radio name=select value=2 onClick='$("#result").val("selectcounty.html");' />县（市、区）</label>
 			</p>
-			<br>
+			<br><br>
 			<p class=red>*注：每个手机号只限评价一个选项。</p>
 			<br><br><br>
 			<input type=hidden name=step value=select />

@@ -2,6 +2,7 @@
 
 body {font-size:14.0pt;font-family:宋体}
 div.main {width:860px;margin: 0px auto;}
+div.main2 {width:900px;margin: 0px auto;}
 table.mobile {margin: 0px auto;}
 .title {text-align:center;line-height:28.0pt;font-size:26.0pt;font-family:方正小标宋简体;font-weight:bold;margin-top: 64px;}
 .sub_title {font-size:18.0pt;font-family:宋体;margin-top: 18px; margin-bottom: 8px;}
@@ -22,3 +23,9 @@ textarea {width:600px;height:80px;resize:none;}
 .center {text-align:center;}
 
 .lineheight2 {line-height:2;}
+.lineheight3 {line-height:3;}
+.font24 {font-size:24.0pt;}
+.font22 {font-size:22.0pt;}
+.font22 {font-size:20.0pt;}
+
+.nowrap {white-space:nowrap;}
